@@ -1,3 +1,4 @@
+// javascript till bildspelet
 var current = 0,
     slides = document.getElementsByClassName("bildspel");
 

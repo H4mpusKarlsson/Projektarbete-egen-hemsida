@@ -1,11 +1,12 @@
+/*Framsidan*/
 .container {
   display: grid;
-  grid-template-columns: 1fr 600px 1fr;
+  grid-template-columns: 1fr 580px 1fr;
   grid-template-rows: repeat(4, 200px);
   padding-bottom: 70px;
 }
 
-header {
+.header1 {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
@@ -21,10 +22,11 @@ nav {
   background-color: #262626;
 }
 
+/*"andra" sidan*/
 .container2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 50px 500px;
+  grid-template-rows: 50px 500px 50px 100px;
   margin-bottom: 100px;
 }
 
@@ -40,14 +42,22 @@ nav {
 
 .figure2 {
   grid-column: 2 / 2;
-  grid-row: 1 / -1;
+  grid-row: 1 / 3;
 }
 
+.banderoll3 {
+  grid-column: 1 / -1;
+  grid-row: 4 / -1;
+  background-color: #262626;
+}
+
+/*anpassning så att bilden lägger sig under paragrafen när det börjar se dåligt ut*/
 @media screen and (max-width: 1540px) {
   .container2 {
     display: grid;
-    grid-template-columns: 1fr 600px 1fr;
-    grid-template-rows: 50px 400px 500px;
+    grid-template-columns: 1fr 580px 1fr;
+    grid-template-rows: 50px 400px auto 100px;
+    margin-bottom: 55%;
   }
 
   .header2 {
@@ -60,12 +70,68 @@ nav {
     grid-row: 2 / 3;
   }
 
-  .intro {
-    text-align: center;
-  }
-
   .figure2 {
     grid-column: 1 / -1;
+    grid-row: 3 / -1;
+  }
+}
+
+/*alla infosidor följer samma gridmönster*/
+.container3 {
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  grid-template-rows: 100px auto 50px 100px;
+  padding-bottom: 70px;
+}
+
+.header3 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.section3 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.figure3 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.banderoll2 {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  background-color: #262626
+}
+
+/*ändra layout när det ser skumt ut*/
+@media screen and (max-width: 1225px) {
+  .container3 {
+    display: grid;
+    grid-template-columns: 1fr 580px 1fr;
+    grid-template-rows: auto auto auto 50px 100px;
+    padding-bottom: 70px;
+  }
+
+  .header3 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .section3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .figure3 {
+    grid-column: 1 / -1;
     grid-row: 3 / 4;
+  }
+
+  .banderoll2 {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+    background-color: #262626
   }
 }
