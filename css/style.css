@@ -64,7 +64,6 @@ h2 {
   position: absolute;
   transition: opacity .5s ease-in;
   width: 66%;
-  padding-bottom: 100px;
 }
 
 .bildspel+.bildpsel {
@@ -75,10 +74,16 @@ h2 {
   .intro {
     padding-right: 0px;
   }
-
-  .bildspel {
+  .bildspel{
     width: 100%;
   }
+}
+
+.banderoll3{
+  background-color: #262626;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 100px;
 }
 
 h3 {
