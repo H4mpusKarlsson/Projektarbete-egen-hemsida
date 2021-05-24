@@ -1,5 +1,5 @@
 var current = 0,
-    slides = document.getElementsByTagName("img");
+    slides = document.getElementsByClassName("bildspel");
 
 setInterval(function() {
   for (var i = 0; i < slides.length; i++) {

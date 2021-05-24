@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body{
+body {
   background-color: #4d4d4d;
 }
 
@@ -13,14 +13,16 @@ h1 {
   text-align: center;
 }
 
-ul{
-  margin: 0;
-  padding: 0;
+ul {
+  width: 100%;
+  display: table;
+  text-align: center;
 }
 
 li {
   display: inline-block;
   background-color: #333333;
+  float: none;
 }
 
 li a {
@@ -47,16 +49,30 @@ h2 {
   text-align: center;
 }
 
-.intro{
+.intro {
   margin: 20px;
   font-weight: bold;
   padding-right: 30px;
   margin-left: 50px;
+  font-size: 20px;
 }
 
 img {
   position: absolute;
   transition: opacity .5s ease-in;
+  width: 66%;
 }
 
-img + img { opacity: 0; }
+img+img {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1540px) {
+  .intro {
+    padding-right: 0px;
+  }
+
+  img{
+    width: 100%;
+  }
+}
