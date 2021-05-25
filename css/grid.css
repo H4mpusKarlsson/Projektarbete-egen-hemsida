@@ -1,7 +1,7 @@
 /*Framsidan*/
 .container {
   display: grid;
-  grid-template-columns: 1fr 580px 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: repeat(4, 200px);
   padding-bottom: 70px;
 }
@@ -20,6 +20,15 @@ nav {
   grid-column: 1 / -1;
   grid-row: 4 / 5;
   background-color: #262626;
+}
+
+@media screen and (max-width: 1225px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: repeat(4, 150px);
+    padding-bottom: 70px;
+  }
 }
 
 /*"andra" sidan*/
@@ -49,8 +58,8 @@ nav {
 @media screen and (max-width: 1540px) {
   .container2 {
     display: grid;
-    grid-template-columns: 1fr 580px 1fr;
-    grid-template-rows: 50px 400px auto;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto auto auto;
     margin-bottom: 55%;
   }
 
@@ -73,7 +82,7 @@ nav {
 /*alla infosidor följer samma gridmönster*/
 .container3 {
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 2fr 2fr;
   grid-template-rows: 100px auto 50px 100px;
   padding-bottom: 70px;
 }
@@ -103,7 +112,7 @@ nav {
 @media screen and (max-width: 1225px) {
   .container3 {
     display: grid;
-    grid-template-columns: 1fr 580px 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto auto auto 50px 100px;
     padding-bottom: 70px;
   }
